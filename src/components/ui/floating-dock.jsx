@@ -5,6 +5,7 @@
  **/
 "use client";
 import { cn } from "@/lib/utils";
+import { IconLayoutNavbarCollapse } from "@tabler/icons-react";
 import { AnimatePresence, motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import Link from "next/link";
 import { useRef, useState } from "react";
@@ -29,6 +30,7 @@ const FloatingDockMobile = ({
   return (
     (<div className={cn("relative block md:hidden", className)}>
       <AnimatePresence>
+        
         {open && (
           <motion.div
             layoutId="nav"
@@ -60,11 +62,11 @@ const FloatingDockMobile = ({
           </motion.div>
         )}
       </AnimatePresence>
-      {/* <button
+      <button
         onClick={() => setOpen(!open)}
         className="h-10 w-10 rounded-full  bg-neutral-800 flex items-center justify-center">
         <IconLayoutNavbarCollapse className="h-5 w-5  text-neutral-400" />
-      </button> */}
+      </button>
     </div>)
   );
 };
