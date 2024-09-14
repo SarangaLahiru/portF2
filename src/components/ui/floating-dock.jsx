@@ -58,7 +58,7 @@ const FloatingDockMobile = ({
         )}
       </AnimatePresence>
       <button
-        onClick={() => setOpen(!open)}
+        onClick={() => setOpen(!open)}  // Toggle state on button click
         className="h-10 w-10 rounded-full bg-neutral-800 flex items-center justify-center"
       >
         <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-400" />
@@ -66,6 +66,7 @@ const FloatingDockMobile = ({
     </div>
   );
 };
+
 
 // Desktop Version of FloatingDock
 const FloatingDockDesktop = ({
@@ -153,7 +154,7 @@ function IconContainer({
             >
               {title}
             </motion.div>
-            
+
           )}
         </AnimatePresence>
         <motion.div
