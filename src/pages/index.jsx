@@ -1,5 +1,7 @@
 // src/pages/index.js
 import { motion } from "framer-motion";
+import { HeroParallaxDemo } from "../components/HomeComponents/parrolex";
+import { TimelineDemo } from "../components/HomeComponents/TimeLine";
 import { AnimatedTooltipPreview } from "../components/HomeComponents/tooltip";
 import Layout from "../components/Layout";
 import { AuroraBackground } from "../components/ui/aurora-background";
@@ -8,6 +10,7 @@ export default function Home() {
   const words = ["better", "cute", "beautiful", "modern"];
   return (
     
+    <>
     <AuroraBackground>
       <motion.div
         initial={{ opacity: 0.0, y: 40 }}
@@ -17,11 +20,13 @@ export default function Home() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="relative flex flex-col gap-4 items-center justify-center px-4"
+        className="relative flex flex-col gap-4 max-sm:items-center justify-center lg:left-[-100px] md:w-[800px] max-sm:w-[400px]"
       >
-        <div className="text-3xl md:text-7xl font-bold text-white text-center">
+        <div className="text-3xl md:text-7xl font-bold text-white">
           Background lights 
+          <div>
           <FlipWords words={words} />
+          </div>
         </div>
         <div className="font-extralight text-base md:text-4xl text-neutral-200 py-4">
           And this, is chemical burn.
@@ -31,7 +36,11 @@ export default function Home() {
         </button>
       </motion.div>
       <AnimatedTooltipPreview/>
+      
     </AuroraBackground>
+    <HeroParallaxDemo/>
+    <TimelineDemo/>
+    </>
       
   );
 }
