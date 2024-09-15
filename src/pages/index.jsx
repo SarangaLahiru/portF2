@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { HeroParallaxDemo } from "../components/HomeComponents/parrolex";
 import { TimelineDemo } from "../components/HomeComponents/TimeLine";
 import { AnimatedTooltipPreview } from "../components/HomeComponents/tooltip";
+import { TypewriterEffectSmoothDemo } from "../components/HomeComponents/typeWrite";
 import Layout from "../components/Layout";
 import { AuroraBackground } from "../components/ui/aurora-background";
 import { FlipWords } from "../components/ui/flip-words";
@@ -22,6 +23,7 @@ export default function Home() {
         }}
         className="relative flex flex-col gap-4 max-sm:items-center justify-center lg:left-[-100px] md:w-[800px] max-sm:w-[400px]"
       >
+        
         <div className="text-3xl md:text-7xl font-bold text-white">
           Background lights 
           <div>
@@ -29,7 +31,8 @@ export default function Home() {
           </div>
         </div>
         <div className="font-extralight text-base md:text-4xl text-neutral-200 py-4">
-          And this, is chemical burn.
+          
+          <TypewriterEffectSmoothDemo/>
         </div>
         <button className=" bg-white rounded-full w-fit text-white text-black px-4 py-2">
           Debug now
