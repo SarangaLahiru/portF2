@@ -57,6 +57,7 @@ export default function NavBar2() {
       href: user ? "/profile" : "#", // Set href to profile if user is logged in
       // Add onClick for login if user is not logged in
     },
+    
   ];
 
   return (
