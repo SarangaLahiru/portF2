@@ -6,7 +6,7 @@ import { SidebarDemo } from "../components/ProfileComponents/side";
 import { useAuth } from "../context/AuthContext";
 
 export default function Profile() {
-  const { user, logout } = useAuth();
+  const { user } = useAuth();
   const router = useRouter();
 
   // Redirect if no user and not loading
